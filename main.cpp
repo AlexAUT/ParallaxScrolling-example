@@ -11,7 +11,7 @@ int main()
 
 	aw::ParallaxSystem scrollSystem;
 	//Offset = the center of the "main"view
-	scrollSystem.setXOffset(0.f);
+	scrollSystem.setCenterXOffset(0.f);
 
 	scrollSystem.addLayer(1.0f); //Scrolls 1:1 with setXOffset/moveX
 	scrollSystem.addLayer(0.5f); //Scrolls at half speed
@@ -39,11 +39,11 @@ int main()
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		{
-			scrollSystem.moveX(-1.f); //Scroll the view
+			scrollSystem.moveCenterX(-1.f); //Scroll the view
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		{
-			scrollSystem.moveX(1.f); //Scroll the view
+			scrollSystem.moveCenterX(1.f); //Scroll the view
 		}
 
 		window.clear();
